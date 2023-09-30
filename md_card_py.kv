@@ -1,0 +1,67 @@
+
+#-------First Window Starts------------>
+<mainHeading>:
+    FloatLayout:
+
+        # ----------the Main heading of the page that is Hotel Name------------->
+        MDLabel:
+            id:heading_label
+            markup:True
+            text:"Hotel Heera Panna and Family Restaurant"
+            font_size: self.width/20
+            size_hint_y: None
+            size_hint_x: 0.9
+            color:(7/255,212/255,231/255,1)
+            font_name:'Times'
+            height: self.texture_size[1] + dp(40)
+            halign:"center"
+            pos_hint:{'right':1,'top':1}
+            background_color:(46/255,8/255,211/255,0.5)
+            canvas.before:
+                Color:
+                    rgba:(46/255,8/255,211/255,0.5)
+                RoundedRectangle:
+                    size:self.size
+                    pos:self.pos
+                    radius:[5]
+            outline_color:(112/255,229/255,189/255,1)
+            outline_width:1
+
+# ---------------------------Hotel Logo Image--------------------------------------------------------------->
+
+    Image:
+        source:'Hotel logo.jpg'
+        size_hint_x:root.size_hint_x-heading_label.size_hint_x
+        keep_ratio:False
+        allow_stretch:True
+        size_hint_y:None
+        #height:heading_label.texture_size[1]+dp(40)
+        height:heading_label.height
+        pos_hint:{"left":1,"top":1}
+<Scrollbar>
+    ScrollView:
+        # here we can set bar color
+        bar_color: [0, 0, 255, 1]
+
+        # here we can set bar width
+        bar_width: 12
+
+        StackLayout:
+
+
+
+            size: (self.parent.width, self.parent.height-1)
+            id: container
+            size_hint_y: None
+
+            height: self.minimum_height
+
+
+
+
+
+
+
+
+
+
